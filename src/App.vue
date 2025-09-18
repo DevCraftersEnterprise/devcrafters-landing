@@ -1,5 +1,8 @@
-<script setup lang="ts"></script>
+
+<script setup lang="ts">
+import ComingSoon from './components/ComingSoon.vue';
+</script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <ComingSoon />
 </template>
