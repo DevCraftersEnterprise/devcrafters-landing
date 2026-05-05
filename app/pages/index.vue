@@ -114,7 +114,7 @@
       <div class="hero-content">
         <span class="hero-badge">
           <span class="badge-star">✦</span>
-          Where innovation meets execution
+          Tu próximo proyecto en las mejores manos
           <span class="badge-star">✦</span>
         </span>
 
@@ -148,11 +148,6 @@
         </div>
       </div>
 
-      <!-- Scroll indicator -->
-      <div class="scroll-ind" aria-hidden="true">
-        <span class="scroll-text">SCROLL DOWN</span>
-        <span class="scroll-line" />
-      </div>
     </section>
   </div>
 </template>
