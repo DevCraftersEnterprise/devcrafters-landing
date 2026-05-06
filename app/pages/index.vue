@@ -11,10 +11,11 @@
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Servicios</a>
+        <a href="#work">Proyectos</a>
+        <a href="#about">Nosotros</a>
+        <a href="#team">Equipo</a>
+        <a href="#contact">Contacto</a>
       </nav>
 
       <div class="navbar-right">
@@ -66,22 +67,27 @@
         <nav class="drawer-nav">
           <a href="#services" class="drawer-link" @click="menuOpen = false">
             <span class="drawer-num">01</span>
-            <span class="drawer-label">Services</span>
+            <span class="drawer-label">Servicios</span>
             <span class="drawer-arrow">↗</span>
           </a>
           <a href="#work" class="drawer-link" @click="menuOpen = false">
             <span class="drawer-num">02</span>
-            <span class="drawer-label">Work</span>
+            <span class="drawer-label">Proyectos</span>
             <span class="drawer-arrow">↗</span>
           </a>
           <a href="#about" class="drawer-link" @click="menuOpen = false">
             <span class="drawer-num">03</span>
-            <span class="drawer-label">About</span>
+            <span class="drawer-label">Nosotros</span>
+            <span class="drawer-arrow">↗</span>
+          </a>
+          <a href="#team" class="drawer-link" @click="menuOpen = false">
+            <span class="drawer-num">04</span>
+            <span class="drawer-label">Equipo</span>
             <span class="drawer-arrow">↗</span>
           </a>
           <a href="#contact" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">04</span>
-            <span class="drawer-label">Contact</span>
+            <span class="drawer-num">05</span>
+            <span class="drawer-label">Contacto</span>
             <span class="drawer-arrow">↗</span>
           </a>
         </nav>
@@ -132,6 +138,14 @@
           <a href="#contact" class="btn btn--primary">Let's Talk →</a>
           <a href="#work" class="btn btn--outline">See Our Work →</a>
         </div>
+
+        <!-- Mobile-only service tags -->
+        <div class="mobile-tags" aria-hidden="true">
+          <span class="mobile-tag"><span class="mobile-tag-dot" />Web Dev</span>
+          <span class="mobile-tag"><span class="mobile-tag-dot" />Mobile</span>
+          <span class="mobile-tag"><span class="mobile-tag-dot" />Software</span>
+          <span class="mobile-tag"><span class="mobile-tag-dot" />Design</span>
+        </div>
       </div>
 
       <!-- Right side decorators -->
@@ -149,6 +163,157 @@
       </div>
 
     </section>
+
+    <!-- ─── About ────────────────────────────────────── -->
+    <section class="about" id="about" aria-label="About">
+
+      <!-- Section label -->
+      <div class="about-label">
+        <span class="deco-dot" />
+        <span>Quiénes somos</span>
+      </div>
+
+      <!-- Vision & Mission cards -->
+      <div class="about-cards">
+        <div class="about-card">
+          <span class="about-card-num">01</span>
+          <h3 class="about-card-title">Visión</h3>
+          <p class="about-card-text">
+            Ser una empresa tecnológica <span class="hl-purple">referente</span> en el desarrollo de soluciones digitales personalizadas, reconocida por su calidad, compromiso y capacidad de transformar ideas en sistemas <span class="hl-yellow">escalables</span> y de alto impacto.
+          </p>
+        </div>
+        <div class="about-card">
+          <span class="about-card-num">02</span>
+          <h3 class="about-card-title">Misión</h3>
+          <p class="about-card-text">
+            Crear <span class="hl-purple">software a medida</span> que transforme la forma en que las empresas operan, integrando <span class="hl-yellow">innovación</span>, estrategia y tecnología de alto nivel.
+          </p>
+        </div>
+      </div>
+
+      <!-- Manifesto -->
+      <div class="manifesto">
+        <h2 class="manifesto-title">Nuestro<br /><span class="c-purple">Manifiesto</span><span class="c-yellow">.</span></h2>
+
+        <div class="manifesto-body">
+          <p class="manifesto-line manifesto-lead">
+            No creemos en soluciones <span class="hl-strike">genéricas</span>.
+          </p>
+
+          <p class="manifesto-line">
+            Creemos que cada negocio es <span class="hl-yellow">único</span>,<br />
+            y su tecnología también debería serlo.
+          </p>
+
+          <div class="manifesto-divider" />
+
+          <p class="manifesto-line manifesto-quiet">
+            Antes de escribir una línea de código, <span class="hl-purple">escuchamos</span>.<br />
+            Antes de construir, <span class="hl-purple">entendemos</span>.
+          </p>
+
+          <p class="manifesto-line">
+            Diseñamos sistemas que <span class="hl-yellow">crecen contigo</span>,<br />
+            que evolucionan contigo y que generan <span class="hl-purple">impacto real</span>.
+          </p>
+
+          <div class="manifesto-divider" />
+
+          <p class="manifesto-line manifesto-quiet">
+            No desarrollamos software por desarrollar.<br />
+            <strong>Construimos herramientas que <span class="hl-yellow">transforman empresas</span>.</strong>
+          </p>
+
+          <p class="manifesto-closer">
+            Esto no es solo tecnología.<br />
+            Es <span class="hl-purple">estrategia</span>, <span class="hl-yellow">visión</span> y <span class="c-white">crecimiento</span>.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── Team ─────────────────────────────────────── -->
+    <section class="team" id="team" aria-label="Team">
+      <div class="team-header">
+        <div class="about-label">
+          <span class="deco-dot" />
+          <span>El equipo</span>
+        </div>
+        <h2 class="team-title">
+          Las personas detrás<br />
+          de tu <span class="c-purple">proyecto</span><span class="c-yellow">.</span>
+        </h2>
+        <p class="team-desc">
+          Equipo compacto, enfoque total. Sin intermediarios — trabajas
+          directamente con quienes construyen tu producto.
+        </p>
+      </div>
+
+      <div class="team-grid">
+
+        <a class="member-card" href="/equipo/sergio" aria-label="Portafolio de Sergio Barreras">
+          <div class="member-avatar member-avatar--s">SB</div>
+          <div class="member-glow member-glow--s" />
+          <div class="member-body">
+            <div class="member-top">
+              <span class="member-num">01</span>
+              <span class="member-arrow">↗</span>
+            </div>
+            <div class="member-info">
+              <span class="member-name">Sergio Barreras</span>
+              <span class="member-role">Full-Stack Developer</span>
+            </div>
+            <div class="member-tags">
+              <span class="member-tag">Vue</span>
+              <span class="member-tag">Node.js</span>
+              <span class="member-tag">APIs</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="member-card" href="/equipo/monica" aria-label="Portafolio de Mónica Chávez">
+          <div class="member-avatar member-avatar--m">MC</div>
+          <div class="member-glow member-glow--m" />
+          <div class="member-body">
+            <div class="member-top">
+              <span class="member-num">02</span>
+              <span class="member-arrow">↗</span>
+            </div>
+            <div class="member-info">
+              <span class="member-name">Mónica Chávez</span>
+              <span class="member-role">Developer &amp; Strategy</span>
+            </div>
+            <div class="member-tags">
+              <span class="member-tag">UX</span>
+              <span class="member-tag">Frontend</span>
+              <span class="member-tag">Strategy</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="member-card" href="/equipo/cristian" aria-label="Portafolio de Cristian Corona">
+          <div class="member-avatar member-avatar--c">CC</div>
+          <div class="member-glow member-glow--c" />
+          <div class="member-body">
+            <div class="member-top">
+              <span class="member-num">03</span>
+              <span class="member-arrow">↗</span>
+            </div>
+            <div class="member-info">
+              <span class="member-name">Cristian Corona</span>
+              <span class="member-role">Frontend Developer</span>
+            </div>
+            <div class="member-tags">
+              <span class="member-tag">React</span>
+              <span class="member-tag">UI</span>
+              <span class="member-tag">CSS</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
   </div>
 </template>
 
@@ -161,20 +326,17 @@ const scrollY = ref(0)
 const menuOpen = ref(false)
 
 // Progressive navbar: smoothstep interpolation over 80px
+// Padding is handled via CSS to avoid SSR/hydration flash
 const navStyle = computed(() => {
   const t = Math.min(scrollY.value / 80, 1)
   const ease = t * t * (3 - 2 * t) // smoothstep
   const bgAlpha = ease * 0.92
   const borderAlpha = ease * 0.07
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768
-  const padV = isMobile ? 16 : 28
-  const padH = isMobile ? 20 : 60
   return {
     background: `rgba(14, 14, 14, ${bgAlpha})`,
     borderBottom: `1px solid rgba(255, 255, 255, ${borderAlpha})`,
     backdropFilter: ease > 0.05 ? 'blur(18px)' : 'none',
     WebkitBackdropFilter: ease > 0.05 ? 'blur(18px)' : 'none',
-    padding: `${padV}px ${padH}px`,
   }
 })
 
@@ -283,7 +445,7 @@ onUnmounted(() => {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  /* padding & background managed by inline :style */
+  /* padding controlled here — NOT in JS — to avoid hydration flash */
   padding: 28px 60px;
 }
 
@@ -567,7 +729,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 120px 60px 96px;
+  padding: 160px 60px 96px;
 }
 
 .hero-content {
@@ -599,7 +761,7 @@ onUnmounted(() => {
 /* Title */
 .hero-title {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.8rem, 8vw, 7.5rem);
+  font-size: clamp(3.2rem, 9.5vw, 9rem);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -0.03em;
@@ -609,7 +771,7 @@ onUnmounted(() => {
 
 .title-sm {
   display: block;
-  font-size: clamp(2.1rem, 6.2vw, 5.8rem);
+  font-size: clamp(2.4rem, 7vw, 7rem);
   line-height: 1.05;
   margin-bottom: 0.1em;
 }
@@ -785,9 +947,15 @@ onUnmounted(() => {
   }
 }
 
+/* Mobile tags — hidden by default, shown only on mobile */
+.mobile-tags {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .navbar {
     grid-template-columns: 1fr auto;
+    padding: 16px 20px;
   }
 
   /* Hide desktop nav and CTA, show burger */
@@ -801,6 +969,44 @@ onUnmounted(() => {
 
   .burger {
     display: flex;
+  }
+
+  /* Hide badge, show mobile tags */
+  .hero-badge {
+    display: none;
+  }
+
+  .mobile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .mobile-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #a3a3a3;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid #2a2a2a;
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .mobile-tag-dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ddf53d;
+    box-shadow: 0 0 6px rgba(221, 245, 61, 0.7);
+    flex-shrink: 0;
   }
 
   .hero {
@@ -823,5 +1029,383 @@ onUnmounted(() => {
   .scroll-ind {
     display: none;
   }
+}
+
+/* ─── About ─────────────────────────────────────────── */
+.about {
+  position: relative;
+  z-index: 2;
+  padding: 140px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 72px;
+}
+
+/* Vision & Mission grid */
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 120px;
+}
+
+.about-card {
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 40px 36px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #3a3a3a;
+}
+
+.about-card-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #8b4df6;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.about-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.about-card-text {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #a3a3a3;
+}
+
+/* Highlight helpers */
+.hl-purple {
+  color: #8b4df6;
+  font-weight: 600;
+}
+
+.hl-yellow {
+  color: #ddf53d;
+  font-weight: 600;
+}
+
+.hl-strike {
+  text-decoration: line-through;
+  text-decoration-color: #ddf53d;
+  text-decoration-thickness: 2px;
+  color: #a3a3a3;
+}
+
+.c-white {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Manifesto */
+.manifesto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.manifesto-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  position: sticky;
+  top: 120px;
+}
+
+.manifesto-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.manifesto-line {
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  line-height: 1.8;
+  color: #d8d8d8;
+}
+
+.manifesto-lead {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.manifesto-quiet {
+  color: #a3a3a3;
+}
+
+.manifesto-closer {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  border-left: 3px solid #8b4df6;
+  padding-left: 20px;
+}
+
+.manifesto-divider {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(to right, #3a3a3a, transparent);
+}
+
+/* About responsive */
+@media (max-width: 1024px) {
+  .about {
+    padding: 100px 36px;
+  }
+
+  .manifesto {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .manifesto-title {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 24px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+    margin-bottom: 72px;
+  }
+}
+
+/* ─── Team ──────────────────────────────────────────── */
+.team {
+  position: relative;
+  z-index: 2;
+  padding: 140px 60px;
+  border-top: 1px solid #1f1f1f;
+}
+
+.team-header {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.team-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 20px 0 24px;
+}
+
+.team-desc {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.85;
+  color: #a3a3a3;
+}
+
+/* Grid */
+.team-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Member card */
+.member-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid #2a2a2a;
+  background: #111111;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 32px;
+  gap: 32px;
+}
+
+.member-card:hover {
+  border-color: #8b4df6;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(139, 77, 246, 0.15);
+}
+
+.member-card:nth-child(2):hover {
+  border-color: #ddf53d;
+  box-shadow: 0 20px 60px rgba(221, 245, 61, 0.1);
+}
+
+/* Avatar */
+.member-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.member-avatar--s { background: linear-gradient(135deg, #8b4df6, #5e2ecf); }
+.member-avatar--m { background: linear-gradient(135deg, #ddf53d, #b8cc1a); color: #0e0e0e; }
+.member-avatar--c { background: linear-gradient(135deg, #3a3a3a, #292929); border: 1px solid #4a4a4a; }
+
+/* Ambient glow behind card */
+.member-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  filter: blur(60px);
+}
+
+.member-card:hover .member-glow { opacity: 1; }
+.member-glow--s { background: #8b4df6; }
+.member-glow--m { background: #ddf53d; }
+.member-glow--c { background: #4a4a4a; }
+
+/* Body */
+.member-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.member-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #4a4a4a;
+}
+
+.member-arrow {
+  font-size: 1.1rem;
+  color: #3a3a3a;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.member-card:hover .member-arrow {
+  color: #8b4df6;
+  transform: translate(3px, -3px);
+}
+
+.member-card:nth-child(2):hover .member-arrow { color: #ddf53d; }
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.member-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.member-role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #a3a3a3;
+  letter-spacing: 0.02em;
+}
+
+.member-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.member-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid #2a2a2a;
+  color: #6a6a6a;
+  background: transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.member-card:hover .member-tag {
+  border-color: #3a3a3a;
+  color: #a3a3a3;
+}
+
+/* Team responsive */
+@media (max-width: 1024px) {
+  .team { padding: 100px 36px; }
+  .team-grid { grid-template-columns: 1fr; gap: 16px; max-width: 480px; }
+  .member-card { flex-direction: row; align-items: center; gap: 24px; padding: 24px; }
+  .member-body { gap: 8px; }
+  .member-top { display: none; }
+}
+
+@media (max-width: 768px) {
+  .team { padding: 80px 24px; }
+  .team-header { margin-bottom: 52px; }
 }
 </style>
