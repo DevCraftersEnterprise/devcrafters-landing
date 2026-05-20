@@ -253,7 +253,10 @@
       <div class="team-grid">
 
         <a class="member-card" href="/equipo/sergio" aria-label="Portafolio de Sergio Barreras">
-          <div class="member-avatar member-avatar--s">SB</div>
+          <div class="member-photo-wrap">
+            <img src="/team/SergioBarreras.png" class="member-photo" alt="Sergio Barreras" />
+            <div class="member-photo-fade" />
+          </div>
           <div class="member-glow member-glow--s" />
           <div class="member-body">
             <div class="member-top">
@@ -273,7 +276,10 @@
         </a>
 
         <a class="member-card" href="/equipo/monica" aria-label="Portafolio de Mónica Chávez">
-          <div class="member-avatar member-avatar--m">MC</div>
+          <div class="member-photo-wrap">
+            <img src="/team/MonicaChavez.png" class="member-photo" alt="Mónica Chávez" />
+            <div class="member-photo-fade" />
+          </div>
           <div class="member-glow member-glow--m" />
           <div class="member-body">
             <div class="member-top">
@@ -293,7 +299,10 @@
         </a>
 
         <a class="member-card" href="/equipo/cristian" aria-label="Portafolio de Cristian Corona">
-          <div class="member-avatar member-avatar--c">CC</div>
+          <div class="member-photo-wrap member-photo-wrap--c">
+            <span class="member-initials">CC</span>
+            <div class="member-photo-fade member-photo-fade--c" />
+          </div>
           <div class="member-glow member-glow--c" />
           <div class="member-body">
             <div class="member-top">
@@ -1250,8 +1259,7 @@ onUnmounted(() => {
 /* Member card */
 .member-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: block;
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid #2a2a2a;
@@ -1260,8 +1268,7 @@ onUnmounted(() => {
   color: inherit;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  padding: 32px;
-  gap: 32px;
+  aspect-ratio: 3 / 4;
 }
 
 .member-card:hover {
@@ -1275,25 +1282,64 @@ onUnmounted(() => {
   box-shadow: 0 20px 60px rgba(221, 245, 61, 0.1);
 }
 
-/* Avatar */
-.member-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  flex-shrink: 0;
-  color: #ffffff;
+/* Photo fills card */
+.member-photo-wrap {
+  position: absolute;
+  inset: 0;
 }
 
-.member-avatar--s { background: linear-gradient(135deg, #8b4df6, #5e2ecf); }
-.member-avatar--m { background: linear-gradient(135deg, #ddf53d, #b8cc1a); color: #0e0e0e; }
-.member-avatar--c { background: linear-gradient(135deg, #3a3a3a, #292929); border: 1px solid #4a4a4a; }
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s ease;
+}
+
+.member-card:hover .member-photo {
+  transform: scale(1.06);
+}
+
+.member-photo-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    rgba(0, 0, 0, 0.45) 52%,
+    rgba(0, 0, 0, 0.88) 72%,
+    #0e0e0e 100%
+  );
+  pointer-events: none;
+}
+
+/* Cristian — no photo yet */
+.member-photo-wrap--c {
+  background: linear-gradient(180deg, #2a2a2a 0%, #111111 100%);
+}
+
+.member-initials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #2e2e2e;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.member-photo-fade--c {
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    rgba(0, 0, 0, 0.6) 55%,
+    #111111 80%,
+    #111111 100%
+  );
+}
 
 /* Ambient glow behind card */
 .member-glow {
@@ -1316,10 +1362,15 @@ onUnmounted(() => {
 
 /* Body */
 .member-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  flex: 1;
+  gap: 10px;
+  padding: 20px 24px 24px;
+  z-index: 2;
 }
 
 .member-top {
@@ -1333,7 +1384,7 @@ onUnmounted(() => {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #4a4a4a;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .member-arrow {

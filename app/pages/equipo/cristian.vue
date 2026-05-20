@@ -14,9 +14,10 @@
 
     <main class="profile-hero">
 
+      <p class="greeting">Hola, soy</p>
+
       <!-- ── Left ── -->
       <div class="profile-left">
-        <p class="greeting">Hola, soy</p>
         <h1 class="profile-name">Cristian<br /><span class="name-last">Corona<span class="name-dot">.</span></span></h1>
         <p class="profile-role">Frontend Developer</p>
 
@@ -187,8 +188,12 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "greeting photo"
+    "info     photo";
+  column-gap: 80px;
+  row-gap: 0;
   padding: 160px 60px 80px;
   max-width: 1200px;
   margin: 0 auto;
@@ -200,6 +205,8 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
 .name-dot { color: #ddf53d; }
 
 .greeting {
+  grid-area: greeting;
+  align-self: end;
   font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 400;
   color: #a3a3a3;
@@ -289,7 +296,13 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
 }
 
 /* ── Right: Avatar scene ── */
+.profile-left {
+  grid-area: info;
+  align-self: start;
+}
+
 .profile-right {
+  grid-area: photo;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -387,32 +400,76 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   .profile-nav { padding: 20px 36px; }
 
   .profile-hero {
-    grid-template-columns: 1fr;
-    padding: 140px 36px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 52px;
+    padding: 140px 36px 80px;
+    gap: 0;
   }
+
+  .greeting { order: 1; margin-bottom: 20px; align-self: center; }
+  .profile-right { order: 2; }
+  .profile-left { order: 3; margin-top: 20px; }
 
   .status-badge { margin: 0 auto 40px; }
   .profile-bio { margin: 0 auto 32px; }
   .profile-tags { justify-content: center; }
   .profile-socials { justify-content: center; }
-  .profile-right { order: -1; }
 
   .avatar-scene { width: 300px; height: 300px; }
   .avatar-circle { width: 165px; height: 165px; font-size: 2.8rem; }
-  .exp-pill { bottom: 48px; right: 10px; }
+  .exp-pill {
+    bottom: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
 }
 
 /* ── About Me ── */
 .about-me {
   border-top: 1px solid #1f1f1f;
   padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle, rgba(139, 77, 246, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.about-me::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(ellipse 55% 45% at 25% 35%, rgba(139, 77, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 75% 65%, rgba(221, 245, 61, 0.07) 0%, transparent 60%);
+  animation: aurora-drift 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes aurora-drift {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(4%, 3%) rotate(3deg);
+    opacity: 0.75;
+  }
+  66% {
+    transform: translate(-3%, -4%) rotate(-2deg);
+    opacity: 0.9;
+  }
 }
 
 .about-me-inner {
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about-me-header {
@@ -511,6 +568,21 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
 }
 
 @media (max-width: 768px) {
+  .profile-nav { padding: 18px 20px; }
+  .breadcrumb { display: none; }
+  .profile-hero { padding: 110px 24px 60px; }
+  .greeting { font-size: 1.15rem; margin-bottom: 14px; }
+  .profile-left { margin-top: 12px; }
+  .avatar-scene { width: 240px; height: 240px; }
+  .avatar-circle { width: 140px; height: 140px; font-size: 2.4rem; }
+  .exp-pill {
+    bottom: 14px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    font-size: 0.82rem;
+    padding: 9px 18px;
+  }
   .about-me { padding: 60px 24px; }
   .about-me-stats { gap: 12px; }
   .stat-card { padding: 22px 18px; }

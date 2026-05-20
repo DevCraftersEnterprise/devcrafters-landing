@@ -14,9 +14,10 @@
 
     <main class="profile-hero">
 
+      <p class="greeting">Hola, soy</p>
+
       <!-- ── Left ── -->
       <div class="profile-left">
-        <p class="greeting">Hola, soy</p>
         <h1 class="profile-name">Sergio<br /><span class="name-last">Barreras<span class="name-dot">.</span></span></h1>
         <p class="profile-role">Full-Stack Developer</p>
 
@@ -57,8 +58,11 @@
       <!-- ── Right: visual ── -->
       <div class="profile-right">
         <div class="avatar-scene">
-          <div class="avatar-glow" />
-          <div class="avatar-circle">SB</div>
+          <img
+            src="/team/SergioBarreras.png"
+            alt="Sergio Barreras"
+            class="profile-photo"
+          />
           <div class="exp-pill">4+ años exp.</div>
         </div>
       </div>
@@ -188,8 +192,12 @@ useHead({ title: 'Sergio Barreras — DevCrafters' })
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "greeting photo"
+    "info     photo";
+  column-gap: 80px;
+  row-gap: 0;
   padding: 160px 60px 80px;
   max-width: 1200px;
   margin: 0 auto;
@@ -201,6 +209,8 @@ useHead({ title: 'Sergio Barreras — DevCrafters' })
 .name-dot { color: #ddf53d; }
 
 .greeting {
+  grid-area: greeting;
+  align-self: end;
   font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 400;
   color: #a3a3a3;
@@ -290,7 +300,13 @@ useHead({ title: 'Sergio Barreras — DevCrafters' })
 }
 
 /* ── Right: Avatar scene ── */
+.profile-left {
+  grid-area: info;
+  align-self: start;
+}
+
 .profile-right {
+  grid-area: photo;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,84 +314,56 @@ useHead({ title: 'Sergio Barreras — DevCrafters' })
 
 .avatar-scene {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 480px;
+  height: 560px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
-/* Main purple glow — animated pulse */
-.avatar-glow {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(139, 77, 246, 0.65) 0%,
-    rgba(139, 77, 246, 0.35) 28%,
-    rgba(139, 77, 246, 0.12) 52%,
-    rgba(139, 77, 246, 0.03) 70%,
-    transparent 82%
-  );
-  pointer-events: none;
-  animation: glow-pulse 3s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.38; transform: scale(0.88); }
-}
-
-/* Subtle lime secondary accent */
-.avatar-glow::after {
-  content: '';
-  position: absolute;
-  width: 35%;
-  height: 35%;
-  bottom: 8%;
-  right: 8%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(221, 245, 61, 0.22) 0%, transparent 70%);
-  filter: blur(14px);
-}
-
-.avatar-circle {
+/* The actual PNG photo */
+.profile-photo {
   position: relative;
-  z-index: 2;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.8rem;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  background: linear-gradient(135deg, #8b4df6, #5e2ecf);
-  box-shadow:
-    0 0 0 8px rgba(139, 77, 246, 0.12),
-    0 0 0 20px rgba(139, 77, 246, 0.05),
-    0 24px 80px rgba(139, 77, 246, 0.4);
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  animation: contour-pulse 5s ease-in-out infinite;
 }
+
+@keyframes contour-pulse {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 12px rgba(139, 77, 246, 0.9))
+      drop-shadow(0 0 40px rgba(139, 77, 246, 0.55))
+      drop-shadow(0 0 80px rgba(139, 77, 246, 0.25));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 8px rgba(139, 77, 246, 0.55))
+      drop-shadow(0 0 28px rgba(139, 77, 246, 0.32))
+      drop-shadow(0 0 60px rgba(139, 77, 246, 0.15));
+  }
+}
+
+/* Contour rings — removed */
 
 .exp-pill {
   position: absolute;
-  bottom: 68px;
-  right: 24px;
-  z-index: 3;
-  background: rgba(14, 14, 14, 0.88);
-  border: 1px solid rgba(139, 77, 246, 0.35);
+  bottom: 40px;
+  right: 0px;
+  z-index: 4;
+  background: rgba(14, 14, 14, 0.9);
+  border: 1px solid rgba(139, 77, 246, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 10px 20px;
+  padding: 14px 26px;
   border-radius: 100px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #c4a7f7;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 .hl-purple { color: #8b4df6; font-weight: 600; }
@@ -386,32 +374,93 @@ useHead({ title: 'Sergio Barreras — DevCrafters' })
   .profile-nav { padding: 20px 36px; }
 
   .profile-hero {
-    grid-template-columns: 1fr;
-    padding: 140px 36px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 52px;
+    padding: 140px 36px 80px;
+    gap: 0;
   }
+
+  .greeting { order: 1; margin-bottom: 20px; align-self: center; }
+  .profile-right { order: 2; }
+  .profile-left { order: 3; margin-top: 20px; }
 
   .status-badge { margin: 0 auto 40px; }
   .profile-bio { margin: 0 auto 32px; }
   .profile-tags { justify-content: center; }
   .profile-socials { justify-content: center; }
-  .profile-right { order: -1; }
 
-  .avatar-scene { width: 300px; height: 300px; }
-  .avatar-circle { width: 165px; height: 165px; font-size: 2.8rem; }
-  .exp-pill { bottom: 48px; right: 10px; }
+  .avatar-scene { width: 320px; height: 360px; }
+  .exp-pill {
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-nav { padding: 18px 20px; }
+  .breadcrumb { display: none; }
+  .profile-hero { padding: 110px 24px 60px; }
+  .greeting { font-size: 1.15rem; margin-bottom: 14px; }
+  .profile-left { margin-top: 12px; }
+  .avatar-scene { width: 240px; height: 280px; }
+  .exp-pill {
+    bottom: 16px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 9px 18px;
+  }
 }
 
 /* ── About Me ── */
 .about-me {
   border-top: 1px solid #1f1f1f;
   padding: 100px 60px;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle, rgba(139, 77, 246, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.about-me::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(ellipse 55% 45% at 25% 35%, rgba(139, 77, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 75% 65%, rgba(221, 245, 61, 0.07) 0%, transparent 60%);
+  animation: aurora-drift 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes aurora-drift {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: translate(4%, 3%) rotate(3deg);
+    opacity: 0.75;
+  }
+  66% {
+    transform: translate(-3%, -4%) rotate(-2deg);
+    opacity: 0.9;
+  }
 }
 
 .about-me-inner {
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about-me-header {
