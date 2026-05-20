@@ -260,7 +260,6 @@
           <div class="member-glow member-glow--s" />
           <div class="member-body">
             <div class="member-top">
-              <span class="member-num">01</span>
               <span class="member-arrow">↗</span>
             </div>
             <div class="member-info">
@@ -283,7 +282,6 @@
           <div class="member-glow member-glow--m" />
           <div class="member-body">
             <div class="member-top">
-              <span class="member-num">02</span>
               <span class="member-arrow">↗</span>
             </div>
             <div class="member-info">
@@ -306,7 +304,6 @@
           <div class="member-glow member-glow--c" />
           <div class="member-body">
             <div class="member-top">
-              <span class="member-num">03</span>
               <span class="member-arrow">↗</span>
             </div>
             <div class="member-info">
@@ -1263,7 +1260,7 @@ onUnmounted(() => {
   overflow: hidden;
   border-radius: 24px;
   border: 1px solid #2a2a2a;
-  background: #111111;
+  background: #100c1e;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -1315,7 +1312,7 @@ onUnmounted(() => {
 
 /* Cristian — no photo yet */
 .member-photo-wrap--c {
-  background: linear-gradient(180deg, #2a2a2a 0%, #111111 100%);
+  background: linear-gradient(180deg, #2a1a4a 0%, #0d0820 100%);
 }
 
 .member-initials {
@@ -1379,14 +1376,6 @@ onUnmounted(() => {
   align-items: center;
 }
 
-.member-num {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.35);
-}
-
 .member-arrow {
   font-size: 1.1rem;
   color: #3a3a3a;
@@ -1435,15 +1424,29 @@ onUnmounted(() => {
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 100px;
-  border: 1px solid #2a2a2a;
-  color: #6a6a6a;
-  background: transparent;
-  transition: border-color 0.25s ease, color 0.25s ease;
+  border: 1px solid rgba(221, 245, 61, 0.35);
+  color: #ddf53d;
+  background: rgba(221, 245, 61, 0.06);
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .member-card:hover .member-tag {
-  border-color: #3a3a3a;
-  color: #a3a3a3;
+  border-color: rgba(221, 245, 61, 0.6);
+  color: #eeff66;
+  background: rgba(221, 245, 61, 0.1);
+}
+
+/* Monica (2nd card) — lilac chips */
+.member-card:nth-child(2) .member-tag {
+  border: 1px solid rgba(196, 167, 247, 0.35);
+  color: #c4a7f7;
+  background: rgba(139, 77, 246, 0.08);
+}
+
+.member-card:nth-child(2):hover .member-tag {
+  border-color: rgba(196, 167, 247, 0.6);
+  color: #d9c2ff;
+  background: rgba(139, 77, 246, 0.13);
 }
 
 /* Team responsive */
