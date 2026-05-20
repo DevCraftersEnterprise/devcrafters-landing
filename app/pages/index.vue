@@ -297,9 +297,9 @@
         </a>
 
         <a class="member-card" href="/equipo/cristian" aria-label="Portafolio de Cristian Corona">
-          <div class="member-photo-wrap member-photo-wrap--c">
-            <span class="member-initials">CC</span>
-            <div class="member-photo-fade member-photo-fade--c" />
+          <div class="member-photo-wrap">
+            <img src="/team/CristianCorona.png" class="member-photo" alt="Cristian Corona" />
+            <div class="member-photo-fade" />
           </div>
           <div class="member-glow member-glow--c" />
           <div class="member-body">
@@ -1355,7 +1355,7 @@ onUnmounted(() => {
 .member-card:hover .member-glow { opacity: 1; }
 .member-glow--s { background: #8b4df6; }
 .member-glow--m { background: #ddf53d; }
-.member-glow--c { background: #4a4a4a; }
+.member-glow--c { background: #8b4df6; }
 
 /* Body */
 .member-body {

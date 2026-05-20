@@ -59,8 +59,11 @@
       <!-- ── Right: visual ── -->
       <div class="profile-right">
         <div class="avatar-scene">
-          <div class="avatar-glow" />
-          <div class="avatar-circle">CC</div>
+          <img
+            src="/team/CristianCorona.png"
+            alt="Cristian Corona"
+            class="profile-photo"
+          />
           <div class="exp-pill">2+ años exp.</div>
         </div>
       </div>
@@ -310,76 +313,43 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
 
 .avatar-scene {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 480px;
+  height: 560px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
-/* Main purple glow — animated pulse */
-.avatar-glow {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(139, 77, 246, 0.65) 0%,
-    rgba(139, 77, 246, 0.35) 28%,
-    rgba(139, 77, 246, 0.12) 52%,
-    rgba(139, 77, 246, 0.03) 70%,
-    transparent 82%
-  );
-  pointer-events: none;
-  animation: glow-pulse 3s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.38; transform: scale(0.88); }
-}
-
-/* Subtle lime secondary accent */
-.avatar-glow::after {
-  content: '';
-  position: absolute;
-  width: 30%;
-  height: 30%;
-  bottom: 10%;
-  right: 10%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(221, 245, 61, 0.18) 0%, transparent 70%);
-  filter: blur(14px);
-}
-
-/* Gray avatar */
-.avatar-circle {
+.profile-photo {
   position: relative;
-  z-index: 2;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.8rem;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  background: linear-gradient(135deg, #4a4a4a, #292929);
-  border: 1px solid #5a5a5a;
-  box-shadow:
-    0 0 0 8px rgba(139, 77, 246, 0.08),
-    0 0 0 20px rgba(139, 77, 246, 0.04),
-    0 24px 80px rgba(139, 77, 246, 0.35);
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  animation: contour-pulse 5s ease-in-out infinite;
+}
+
+@keyframes contour-pulse {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 12px rgba(139, 77, 246, 0.9))
+      drop-shadow(0 0 40px rgba(139, 77, 246, 0.55))
+      drop-shadow(0 0 80px rgba(139, 77, 246, 0.25));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 8px rgba(139, 77, 246, 0.55))
+      drop-shadow(0 0 28px rgba(139, 77, 246, 0.32))
+      drop-shadow(0 0 60px rgba(139, 77, 246, 0.15));
+  }
 }
 
 .exp-pill {
   position: absolute;
-  bottom: 68px;
-  right: 24px;
-  z-index: 3;
+  bottom: 100px;
+  right: 0;
+  z-index: 4;
   background: rgba(14, 14, 14, 0.88);
   border: 1px solid rgba(139, 77, 246, 0.35);
   backdrop-filter: blur(12px);
@@ -417,8 +387,7 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   .profile-tags { justify-content: center; }
   .profile-socials { justify-content: center; }
 
-  .avatar-scene { width: 300px; height: 300px; }
-  .avatar-circle { width: 165px; height: 165px; font-size: 2.8rem; }
+  .avatar-scene { width: 320px; height: 360px; }
   .exp-pill {
     bottom: 24px;
     left: 50%;
@@ -573,8 +542,7 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   .profile-hero { padding: 110px 24px 60px; }
   .greeting { font-size: 1.15rem; margin-bottom: 14px; }
   .profile-left { margin-top: 12px; }
-  .avatar-scene { width: 240px; height: 240px; }
-  .avatar-circle { width: 140px; height: 140px; font-size: 2.4rem; }
+  .avatar-scene { width: 240px; height: 280px; }
   .exp-pill {
     bottom: 14px;
     left: 50%;
