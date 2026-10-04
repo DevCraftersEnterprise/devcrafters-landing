@@ -2,31 +2,29 @@
   <div class="profile-page">
 
     <header class="profile-nav">
-      <a href="/" class="brand">
+      <NuxtLinkLocale to="/" class="brand">
         Dev<span class="brand-accent">Crafters</span><span class="brand-dot">.</span>
-      </a>
-      <div class="breadcrumb">
-        <a href="/#team" class="bc-link">Equipo</a>
-        <span class="bc-sep" aria-hidden="true">/</span>
-        <span class="bc-current">Cristian Corona</span>
+      </NuxtLinkLocale>
+      <div class="nav-right">
+        <div class="breadcrumb">
+          <NuxtLinkLocale :to="{ path: '/', hash: '#team' }" class="bc-link">{{ t('nav.team') }}</NuxtLinkLocale>
+          <span class="bc-sep" aria-hidden="true">/</span>
+          <span class="bc-current">{{ name }}</span>
+        </div>
+        <LangSwitch />
       </div>
     </header>
 
     <main class="profile-hero">
 
-      <p class="greeting">Hola, soy</p>
+      <p class="greeting">{{ t('profile.greeting') }}</p>
 
       <!-- ── Left ── -->
       <div class="profile-left">
         <h1 class="profile-name">Cristian<br /><span class="name-last">Corona<span class="name-dot">.</span></span></h1>
-        <p class="profile-role">Frontend Developer</p>
+        <p class="profile-role">{{ t('profile.cristian.role') }}</p>
 
-        <p class="profile-bio">
-          Desarrollador Full Stack con experiencia en web e IT, incluyendo soporte técnico,
-          implementación de sistemas y administración de redes. Me interesa crear aplicaciones
-          funcionales y escalables, combinando <strong>backend</strong>, <strong>frontend</strong>
-          e infraestructura tecnológica.
-        </p>
+        <p class="profile-bio" v-html="t('profile.cristian.bio')" />
 
         <div class="profile-tags">
           <span class="ptag">NestJS</span>
@@ -37,18 +35,18 @@
         </div>
 
         <div class="profile-socials">
-          <a href="https://cristian-corona-portafolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Portfolio de Cristian Corona">
+          <a href="https://cristian-corona-portafolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="social-btn" :aria-label="t('profile.aria.portfolio', { name })">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
             </svg>
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub de Cristian Corona">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-btn" :aria-label="t('profile.aria.github', { name })">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn de Cristian Corona">
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-btn" :aria-label="t('profile.aria.linkedin', { name })">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
@@ -60,11 +58,14 @@
       <div class="profile-right">
         <div class="avatar-scene">
           <img
-            src="/team/CristianCorona.png"
-            alt="Cristian Corona"
+            src="/team/CristianCorona-600.webp"
+            srcset="/team/CristianCorona-600.webp 600w, /team/CristianCorona-1200.webp 1200w"
+            sizes="(max-width: 768px) 240px, (max-width: 1024px) 320px, 480px"
+            fetchpriority="high"
+            :alt="name"
             class="profile-photo"
           />
-          <div class="exp-pill">2+ años exp.</div>
+          <div class="exp-pill">{{ t('profile.expPill', { n: 2 }) }}</div>
         </div>
       </div>
 
@@ -75,45 +76,31 @@
       <div class="about-me-inner">
 
         <div class="about-me-header">
-          <h2 class="about-me-title">Sobre mí</h2>
+          <h2 class="about-me-title">{{ t('profile.about') }}</h2>
           <div class="about-me-line" />
         </div>
 
         <div class="about-me-body">
           <div class="about-me-text">
-            <p>
-              Soy <span class="hl-purple">desarrollador Full Stack</span> con experiencia
-              en desarrollo web y en el área de <span class="hl-yellow">IT</span>, incluyendo
-              soporte técnico, implementación de sistemas y administración de redes.
-            </p>
-            <p>
-              Me interesa crear aplicaciones <span class="hl-purple">funcionales y escalables</span>,
-              aprovechando tanto el desarrollo <span class="hl-yellow">backend</span> como
-              <span class="hl-yellow">frontend</span> y mi experiencia en infraestructura tecnológica.
-            </p>
-            <p>
-              Co-fundador de <span class="hl-yellow">DevCrafters</span>, donde construimos
-              soluciones digitales que combinan <span class="hl-purple">solidez técnica</span>
-              con impacto real en el negocio.
-            </p>
+            <p v-for="(para, i) in about" :key="i" v-html="rt(para)" />
           </div>
 
           <div class="about-me-stats">
             <div class="stat-card">
               <span class="stat-num">2<span class="stat-plus">+</span></span>
-              <span class="stat-label">Años de experiencia</span>
+              <span class="stat-label">{{ t('profile.stats.years') }}</span>
             </div>
             <div class="stat-card">
               <span class="stat-num">10<span class="stat-plus">+</span></span>
-              <span class="stat-label">Proyectos completados</span>
+              <span class="stat-label">{{ t('profile.stats.projects') }}</span>
             </div>
             <div class="stat-card">
               <span class="stat-num">5<span class="stat-plus">+</span></span>
-              <span class="stat-label">Sistemas implementados</span>
+              <span class="stat-label">{{ t('profile.stats.systems') }}</span>
             </div>
             <div class="stat-card">
               <span class="stat-num">100<span class="stat-plus">%</span></span>
-              <span class="stat-label">Compromiso</span>
+              <span class="stat-label">{{ t('profile.stats.commitment') }}</span>
             </div>
           </div>
         </div>
@@ -125,9 +112,16 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Cristian Corona — DevCrafters' })
-</script>
+import { computed } from 'vue'
 
+const { t, tm, rt } = useI18n()
+const name = 'Cristian Corona'
+
+useHead({ title: `${name} — DevCrafters` })
+
+// Copy lives in i18n/locales/*.json under profile.cristian
+const about = computed(() => tm('profile.cristian.about') as unknown as any[])
+</script>
 <style scoped>
 /* ── Layout ── */
 .profile-page {
@@ -186,6 +180,12 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
 .bc-sep { color: #3a3a3a; }
 .bc-current { color: #a3a3a3; }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 /* ── Hero ── */
 .profile-hero {
   flex: 1;
@@ -241,7 +241,7 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   margin-bottom: 32px;
 }
 
-.profile-bio strong {
+.profile-bio :deep(strong) {
   color: #ffffff;
   font-weight: 600;
 }
@@ -482,7 +482,7 @@ useHead({ title: 'Cristian Corona — DevCrafters' })
   color: #a3a3a3;
 }
 
-.about-me-text strong {
+.about-me-text :deep(strong) {
   color: #ffffff;
   font-weight: 600;
 }

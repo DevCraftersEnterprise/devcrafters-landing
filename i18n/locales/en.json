@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "title": "DevCrafters",
+    "description": "DevCrafters — web, mobile & custom software development. We turn bold ideas into high-performance digital products."
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "about": "About",
+    "team": "Team",
+    "contact": "Contact",
+    "cta": "Let's Talk →",
+    "ariaMain": "Main navigation",
+    "toggleMenu": "Toggle menu",
+    "closeMenu": "Close menu",
+    "tagline": "We build. We ship. We scale."
+  },
+  "lang": {
+    "label": "Language",
+    "switchTo": "Switch to {lang}"
+  },
+  "hero": {
+    "badge": "Your next project in the best hands",
+    "line1": "WE THINK",
+    "line2": "AND BUILD",
+    "line3": "DIFFERENT",
+    "desc": "Creative engineering with a business mindset. We build web apps, mobile apps and custom software that take your company to the next level.",
+    "ctaPrimary": "Let's Talk →",
+    "ctaSecondary": "See Our Work →",
+    "tags": {
+      "web": "Web Dev",
+      "mobile": "Mobile",
+      "software": "Software",
+      "design": "Design"
+    }
+  },
+  "about": {
+    "label": "Who we are",
+    "visionTitle": "Vision",
+    "vision": "To be a <span class=\"hl-purple\">leading</span> technology company in custom digital solutions, recognized for our quality, commitment and ability to turn ideas into <span class=\"hl-yellow\">scalable</span>, high-impact systems.",
+    "missionTitle": "Mission",
+    "mission": "To create <span class=\"hl-purple\">custom software</span> that transforms the way companies operate, combining <span class=\"hl-yellow\">innovation</span>, strategy and top-tier technology.",
+    "manifestoTitle1": "Our",
+    "manifestoTitle2": "Manifesto",
+    "manifesto": {
+      "lead": "We don't believe in <span class=\"hl-strike\">one-size-fits-all</span> solutions.",
+      "l1": "We believe every business is <span class=\"hl-yellow\">unique</span>,<br />and its technology should be too.",
+      "l2": "Before writing a single line of code, we <span class=\"hl-purple\">listen</span>.<br />Before building, we <span class=\"hl-purple\">understand</span>.",
+      "l3": "We design systems that <span class=\"hl-yellow\">grow with you</span>,<br />evolve with you and create <span class=\"hl-purple\">real impact</span>.",
+      "l4": "We don't build software for the sake of it.<br /><strong>We build tools that <span class=\"hl-yellow\">transform businesses</span>.</strong>",
+      "closer": "This isn't just technology.<br />It's <span class=\"hl-purple\">strategy</span>, <span class=\"hl-yellow\">vision</span> and <span class=\"c-white\">growth</span>."
+    }
+  },
+  "team": {
+    "label": "The team",
+    "title1": "The people behind",
+    "title2": "your",
+    "title3": "project",
+    "desc": "A compact team with total focus. No middlemen — you work directly with the people building your product.",
+    "portfolioOf": "{name}'s portfolio",
+    "roles": {
+      "sergio": "Full-Stack Developer",
+      "monica": "Developer & Strategy",
+      "cristian": "Frontend Developer"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title1": "What we",
+    "title2": "do",
+    "desc": "From idea to product in production. We design, build and maintain software tailored to the way your business works.",
+    "items": [
+      {
+        "title": "Web Development",
+        "text": "Fast, accessible, SEO-optimized websites, landing pages and web apps, ready to grow with your brand.",
+        "tags": ["Vue", "Nuxt", "Angular"]
+      },
+      {
+        "title": "Custom Systems",
+        "text": "Admin dashboards, order management, inventory and internal processes with per-user roles and permissions.",
+        "tags": ["Dashboards", "Roles", "Reports"]
+      },
+      {
+        "title": "APIs & Backend",
+        "text": "Secure, scalable APIs with clean architecture, JWT authentication, relational databases and real-time features.",
+        "tags": ["NestJS", "PostgreSQL", "WebSockets"]
+      },
+      {
+        "title": "Automation & AI",
+        "text": "WhatsApp conversational assistants, automated workflows and AI integrations working 24/7 for your business.",
+        "tags": ["OpenAI", "Twilio", "n8n"]
+      },
+      {
+        "title": "Modernization",
+        "text": "We migrate legacy systems to modern technologies module by module, without stopping operations or breaking what already works.",
+        "tags": ["Migration", "Refactor", "Testing"]
+      },
+      {
+        "title": "Mobile Apps & Cloud",
+        "text": "PWAs and mobile apps connected to your system, with automated deployments and separate staging and production environments.",
+        "tags": ["PWA", "Docker", "CI/CD"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Work",
+    "title1": "What we've",
+    "title2": "built",
+    "desc": "Real products, in production, solving concrete problems for businesses and institutions.",
+    "items": {
+      "botbite": {
+        "category": "Restaurants · AI",
+        "tagline": "An AI-powered virtual waiter on WhatsApp.",
+        "description": "An assistant that serves restaurant customers right on WhatsApp: it shows the menu, takes orders in several languages and sends them to the register in real time.",
+        "features": [
+          "Multilingual WhatsApp bot with conversational AI",
+          "Web dashboard for restaurants, branches, menus and products",
+          "Real-time order notifications to the register"
+        ]
+      },
+      "magnolias": {
+        "category": "Bakery · Multi-branch",
+        "tagline": "End-to-end order management for a bakery with multiple branches.",
+        "description": "Public landing page, online store and admin dashboard covering the whole flow: from taking a custom cake order to the driver delivering it.",
+        "features": [
+          "Orders with multi-tier cakes, flavors and suggested pricing",
+          "Drag & drop production board for bakers",
+          "Per-branch delivery and role-based views (admin, baker, driver)",
+          "Encrypted sensitive data and an interactive user manual"
+        ]
+      },
+      "diocesis": {
+        "name": "Diocese of Cd. Obregón",
+        "category": "Institution · Modernization",
+        "tagline": "A public and ecclesiastical management platform, modernized from the ground up.",
+        "description": "Public website with news and a directory of priests and parishes, plus an admin dashboard. We migrated the legacy Django backend to NestJS module by module, with zero downtime.",
+        "features": [
+          "News, priest and parish directory, documents",
+          "Biblical Institute and ISMA modules with a calendar",
+          "Per-module permissions and secure password migration"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title1": "Let's talk about",
+    "title2": "your",
+    "title3": "project",
+    "desc": "Tell us what you need. We'll get back to you within 24 hours with next steps — no strings attached.",
+    "mailLabel": "Email us directly",
+    "mailReveal": "Show email",
+    "points": [
+      "Free discovery call",
+      "Clear proposal for scope, timeline and cost",
+      "Work directly with the people building your product"
+    ],
+    "form": {
+      "name": "Name",
+      "namePh": "Your name",
+      "email": "Email",
+      "emailPh": "you{'@'}company.com",
+      "company": "Company",
+      "phone": "Phone",
+      "optional": "Optional",
+      "needs": "What do you need?",
+      "message": "Message",
+      "messagePh": "Tell us about your idea, goals and timeline…",
+      "submit": "Send message →",
+      "sending": "Sending…",
+      "options": ["Website", "Custom system", "Mobile app", "Automation / AI", "Modernization", "Other"]
+    },
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email.",
+      "message": "Tell us a bit more (at least 10 characters).",
+      "send": "We couldn't send your message right now.",
+      "fallback": "Send it from your email →"
+    },
+    "success": {
+      "title": "Message sent!",
+      "text": "Thanks, {name}. We'll be in touch very soon at {email}.",
+      "again": "Send another message"
+    }
+  },
+  "footer": {
+    "aria": "Footer",
+    "write": "Email us ✉",
+    "rights": "© {year} DevCrafters. All rights reserved.",
+    "madeWith": "Made with <span class=\"c-purple\">code</span> and <span class=\"c-yellow\">coffee</span>."
+  },
+  "profile": {
+    "greeting": "Hi, I'm",
+    "about": "About me",
+    "expPill": "{n}+ yrs exp.",
+    "available": "Available for new projects",
+    "experience": "Experience",
+    "stack": "Tech stack",
+    "featured": "Featured projects",
+    "workTogether": "Let's work together →",
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Completed projects",
+      "certs": "Certifications",
+      "languages": "Languages · Spanish & English",
+      "productDesigns": "Product designs",
+      "systems": "Systems deployed",
+      "commitment": "Commitment"
+    },
+    "aria": {
+      "github": "{name} on GitHub",
+      "linkedin": "{name} on LinkedIn",
+      "portfolio": "{name}'s portfolio",
+      "email": "Email {name}"
+    },
+    "sergio": {
+      "role": "Full-Stack Developer",
+      "location": "Aguascalientes, MX",
+      "bio": "Specialized in building scalable web applications with <strong>Angular</strong>, <strong>Vue</strong>, <strong>NestJS</strong> and <strong>TypeScript</strong>. Passionate about clean architecture, user experience and automation.",
+      "about": [
+        "I'm a <span class=\"hl-purple\">Full Stack Developer</span> with more than <span class=\"hl-yellow\">5 years</span> of experience building scalable web applications. I focus on efficient, maintainable, user-centered solutions.",
+        "I specialize in modern architectures with <span class=\"hl-purple\">Angular</span>, <span class=\"hl-purple\">Vue</span>, <span class=\"hl-purple\">NestJS</span> and <span class=\"hl-purple\">TypeScript</span>, applying <span class=\"hl-yellow\">Clean Architecture</span> and automating processes to guarantee quality code.",
+        "Co-founder of <span class=\"hl-yellow\">DevCrafters</span>, where we help companies build web, mobile and cloud solutions that <span class=\"hl-purple\">transform their business processes</span>."
+      ],
+      "experience": [
+        {
+          "role": "Angular Frontend Developer",
+          "company": "Capgemini",
+          "period": "May 2026 — Present",
+          "points": [
+            "Resolved accessibility issues in component libraries.",
+            "Collaborated on design system components.",
+            "Improved component adoption through clear documentation."
+          ]
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Creative Software International",
+          "period": "Jul 2025 — Oct 2025",
+          "points": [
+            "Designed the database schema for the permissions system.",
+            "Implemented workflow automation.",
+            "Fixed deadlocks and CRUD inconsistencies."
+          ]
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Taruks Soluciones S.A. de C.V.",
+          "period": "Dec 2022 — Aug 2024",
+          "points": [
+            "Angular development with Clean Architecture.",
+            "REST API integration and reactive forms.",
+            "Scrum participation and code reviews."
+          ]
+        }
+      ],
+      "stackGroups": {
+        "languages": "Languages",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Databases",
+        "devops": "DevOps & Cloud",
+        "tools": "Testing & tools"
+      },
+      "projects": [
+        { "name": "BotBite", "description": "AI-powered WhatsApp waiter assistant for restaurants, with multilingual support." },
+        { "name": "Diocese of Cd. Obregón", "description": "Ecclesiastical management platform and modernization of its legacy system." },
+        { "name": "Magnolias", "description": "Order management system for a bakery with multiple branches." }
+      ]
+    },
+    "monica": {
+      "role": "Frontend Developer & Design",
+      "bio": "Combines frontend development with strategic product thinking. Specialized in <strong>UX</strong>, information architecture and user-centered digital experience design.",
+      "about": [
+        "I'm a <span class=\"hl-purple\">Frontend Developer</span> focused on designing digital experiences that <span class=\"hl-yellow\">connect with people</span>. I combine development and product thinking to create interfaces that don't just work — they feel right.",
+        "I specialize in <span class=\"hl-purple\">Vue.js</span>, <span class=\"hl-purple\">Tailwind</span> and <span class=\"hl-purple\">Figma</span>, working closely with teams to align design, <span class=\"hl-yellow\">usability</span> and business goals.",
+        "Co-founder of <span class=\"hl-yellow\">DevCrafters</span>, where we build digital products that transform the way companies <span class=\"hl-purple\">operate and grow</span>."
+      ]
+    },
+    "cristian": {
+      "role": "Frontend Developer",
+      "bio": "Full Stack developer with experience in web and IT, including technical support, systems implementation and network administration. I enjoy building functional, scalable applications that combine <strong>backend</strong>, <strong>frontend</strong> and technology infrastructure.",
+      "about": [
+        "I'm a <span class=\"hl-purple\">Full Stack developer</span> with experience in web development and <span class=\"hl-yellow\">IT</span>, including technical support, systems implementation and network administration.",
+        "I enjoy building <span class=\"hl-purple\">functional, scalable</span> applications, drawing on both <span class=\"hl-yellow\">backend</span> and <span class=\"hl-yellow\">frontend</span> development as well as my infrastructure experience.",
+        "Co-founder of <span class=\"hl-yellow\">DevCrafters</span>, where we build digital solutions that combine <span class=\"hl-purple\">technical strength</span> with real business impact."
+      ]
+    }
+  }
+}

@@ -8,11 +8,6 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content:
-            'DevCrafters — web, mobile & software development. We turn bold ideas into high-performance digital products.',
-        },
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
@@ -26,4 +21,28 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    // Spanish lives at "/", English under "/en"
+    defaultLocale: 'es',
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'es', language: 'es-MX', name: 'Español', file: 'es.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    // Messages carry highlight markup (<span class="hl-*">) rendered with v-html.
+    // They are static and authored by us, never user input.
+    compilation: { strictMessage: false },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'dc_lang',
+      redirectOn: 'root',
+    },
+  },
+  runtimeConfig: {
+    public: {
+      // FormSubmit random alias (NUXT_PUBLIC_FORMSUBMIT_ID); empty falls back to the encoded inbox.
+      formsubmitId: '',
+    },
+  },
 })

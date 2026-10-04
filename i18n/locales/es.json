@@ -1,0 +1,290 @@
+{
+  "meta": {
+    "title": "DevCrafters",
+    "description": "DevCrafters — desarrollo web, móvil y de software a medida. Convertimos ideas en productos digitales de alto rendimiento."
+  },
+  "nav": {
+    "services": "Servicios",
+    "work": "Proyectos",
+    "about": "Nosotros",
+    "team": "Equipo",
+    "contact": "Contacto",
+    "cta": "Hablemos →",
+    "ariaMain": "Navegación principal",
+    "toggleMenu": "Abrir o cerrar menú",
+    "closeMenu": "Cerrar menú",
+    "tagline": "We build. We ship. We scale."
+  },
+  "lang": {
+    "label": "Idioma",
+    "switchTo": "Cambiar a {lang}"
+  },
+  "hero": {
+    "badge": "Tu próximo proyecto en las mejores manos",
+    "line1": "PENSAMOS",
+    "line2": "Y CONSTRUIMOS",
+    "line3": "DIFERENTE",
+    "desc": "Ingeniería creativa con visión de negocio. Desarrollamos apps web, móviles y software a medida que impulsan tu empresa al siguiente nivel.",
+    "ctaPrimary": "Hablemos →",
+    "ctaSecondary": "Ver proyectos →",
+    "tags": {
+      "web": "Web Dev",
+      "mobile": "Mobile",
+      "software": "Software",
+      "design": "Diseño"
+    }
+  },
+  "about": {
+    "label": "Quiénes somos",
+    "visionTitle": "Visión",
+    "vision": "Ser una empresa tecnológica <span class=\"hl-purple\">referente</span> en el desarrollo de soluciones digitales personalizadas, reconocida por su calidad, compromiso y capacidad de transformar ideas en sistemas <span class=\"hl-yellow\">escalables</span> y de alto impacto.",
+    "missionTitle": "Misión",
+    "mission": "Crear <span class=\"hl-purple\">software a medida</span> que transforme la forma en que las empresas operan, integrando <span class=\"hl-yellow\">innovación</span>, estrategia y tecnología de alto nivel.",
+    "manifestoTitle1": "Nuestro",
+    "manifestoTitle2": "Manifiesto",
+    "manifesto": {
+      "lead": "No creemos en soluciones <span class=\"hl-strike\">genéricas</span>.",
+      "l1": "Creemos que cada negocio es <span class=\"hl-yellow\">único</span>,<br />y su tecnología también debería serlo.",
+      "l2": "Antes de escribir una línea de código, <span class=\"hl-purple\">escuchamos</span>.<br />Antes de construir, <span class=\"hl-purple\">entendemos</span>.",
+      "l3": "Diseñamos sistemas que <span class=\"hl-yellow\">crecen contigo</span>,<br />que evolucionan contigo y que generan <span class=\"hl-purple\">impacto real</span>.",
+      "l4": "No desarrollamos software por desarrollar.<br /><strong>Construimos herramientas que <span class=\"hl-yellow\">transforman empresas</span>.</strong>",
+      "closer": "Esto no es solo tecnología.<br />Es <span class=\"hl-purple\">estrategia</span>, <span class=\"hl-yellow\">visión</span> y <span class=\"c-white\">crecimiento</span>."
+    }
+  },
+  "team": {
+    "label": "El equipo",
+    "title1": "Las personas detrás",
+    "title2": "de tu",
+    "title3": "proyecto",
+    "desc": "Equipo compacto, enfoque total. Sin intermediarios — trabajas directamente con quienes construyen tu producto.",
+    "portfolioOf": "Portafolio de {name}",
+    "roles": {
+      "sergio": "Full-Stack Developer",
+      "monica": "Developer & Strategy",
+      "cristian": "Frontend Developer"
+    }
+  },
+  "services": {
+    "label": "Servicios",
+    "title1": "Lo que",
+    "title2": "hacemos",
+    "desc": "De la idea al producto en producción. Diseñamos, construimos y mantenemos software a la medida de cómo opera tu negocio.",
+    "items": [
+      {
+        "title": "Desarrollo Web",
+        "text": "Sitios, landing pages y aplicaciones web rápidas, accesibles y optimizadas para SEO, listas para crecer con tu marca.",
+        "tags": ["Vue", "Nuxt", "Angular"]
+      },
+      {
+        "title": "Sistemas a medida",
+        "text": "Paneles de administración, control de pedidos, inventarios y procesos internos con roles y permisos por usuario.",
+        "tags": ["Dashboards", "Roles", "Reportes"]
+      },
+      {
+        "title": "APIs y Backend",
+        "text": "APIs seguras y escalables con arquitectura limpia, autenticación JWT, bases de datos relacionales y tiempo real.",
+        "tags": ["NestJS", "PostgreSQL", "WebSockets"]
+      },
+      {
+        "title": "Automatización e IA",
+        "text": "Asistentes conversacionales en WhatsApp, flujos automatizados e integraciones con IA que trabajan 24/7 por tu negocio.",
+        "tags": ["OpenAI", "Twilio", "n8n"]
+      },
+      {
+        "title": "Modernización",
+        "text": "Migramos sistemas legacy a tecnologías actuales módulo por módulo, sin detener la operación ni romper lo que ya funciona.",
+        "tags": ["Migración", "Refactor", "Testing"]
+      },
+      {
+        "title": "Apps móviles y Nube",
+        "text": "PWAs y apps móviles conectadas a tu sistema, con despliegues automatizados y ambientes separados de pruebas y producción.",
+        "tags": ["PWA", "Docker", "CI/CD"]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Proyectos",
+    "title1": "Lo que hemos",
+    "title2": "construido",
+    "desc": "Productos reales, en operación, resolviendo problemas concretos para negocios e instituciones.",
+    "items": {
+      "botbite": {
+        "category": "Restaurantes · IA",
+        "tagline": "Mesero virtual por WhatsApp con inteligencia artificial.",
+        "description": "Un asistente que atiende a los clientes del restaurante directamente en WhatsApp: muestra el menú, toma pedidos en varios idiomas y los envía a caja en tiempo real.",
+        "features": [
+          "Bot multilingüe en WhatsApp con IA conversacional",
+          "Panel web para restaurantes, sucursales, menús y productos",
+          "Notificaciones de pedidos a caja en tiempo real"
+        ]
+      },
+      "magnolias": {
+        "category": "Pastelería · Multi-sucursal",
+        "tagline": "Gestión integral de pedidos para una pastelería con varias sucursales.",
+        "description": "Landing pública, tienda y panel de administración que cubre todo el flujo: desde que se toma un pastel personalizado hasta que el repartidor lo entrega.",
+        "features": [
+          "Pedidos con pasteles por pisos, sabores y precio sugerido",
+          "Tablero de producción drag & drop para pasteleros",
+          "Reparto por sucursal y vistas por rol (admin, pastelero, repartidor)",
+          "Datos sensibles cifrados y manual de usuario interactivo"
+        ]
+      },
+      "diocesis": {
+        "name": "Diócesis de Cd. Obregón",
+        "category": "Institución · Modernización",
+        "tagline": "Plataforma pública y de gestión eclesiástica, modernizada desde su base.",
+        "description": "Sitio público con noticias, directorio de sacerdotes y parroquias, junto a un panel de administración. Migramos el backend legacy en Django a NestJS módulo por módulo, sin interrumpir el servicio.",
+        "features": [
+          "Noticias, directorio de padres y parroquias, documentos",
+          "Módulos de Instituto Bíblico e ISMA con calendario",
+          "Permisos por módulo y migración segura de contraseñas"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contacto",
+    "title1": "Hablemos de",
+    "title2": "tu",
+    "title3": "proyecto",
+    "desc": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con los siguientes pasos — sin compromiso.",
+    "mailLabel": "Escríbenos directo",
+    "mailReveal": "Mostrar correo",
+    "points": [
+      "Primera llamada de diagnóstico gratuita",
+      "Propuesta clara de alcance, tiempos y costo",
+      "Trato directo con quienes construyen tu producto"
+    ],
+    "form": {
+      "name": "Nombre",
+      "namePh": "Tu nombre",
+      "email": "Correo",
+      "emailPh": "tu{'@'}correo.com",
+      "company": "Empresa",
+      "phone": "Teléfono",
+      "optional": "Opcional",
+      "needs": "¿Qué necesitas?",
+      "message": "Mensaje",
+      "messagePh": "Cuéntanos sobre tu idea, objetivos y tiempos…",
+      "submit": "Enviar mensaje →",
+      "sending": "Enviando…",
+      "options": ["Sitio web", "Sistema a medida", "App móvil", "Automatización / IA", "Modernización", "Otro"]
+    },
+    "errors": {
+      "name": "Escribe tu nombre.",
+      "email": "Escribe un correo válido.",
+      "message": "Cuéntanos un poco más (mínimo 10 caracteres).",
+      "send": "No pudimos enviar tu mensaje en este momento.",
+      "fallback": "Envíalo desde tu correo →"
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "text": "Gracias, {name}. Te contactaremos muy pronto en {email}.",
+      "again": "Enviar otro mensaje"
+    }
+  },
+  "footer": {
+    "aria": "Pie de página",
+    "write": "Escríbenos ✉",
+    "rights": "© {year} DevCrafters. Todos los derechos reservados.",
+    "madeWith": "Hecho con <span class=\"c-purple\">código</span> y <span class=\"c-yellow\">café</span>."
+  },
+  "profile": {
+    "greeting": "Hola, soy",
+    "about": "Sobre mí",
+    "expPill": "{n}+ años exp.",
+    "available": "Disponible para nuevos proyectos",
+    "experience": "Experiencia",
+    "stack": "Stack tecnológico",
+    "featured": "Proyectos destacados",
+    "workTogether": "Trabajemos juntos →",
+    "stats": {
+      "years": "Años de experiencia",
+      "projects": "Proyectos completados",
+      "certs": "Certificaciones",
+      "languages": "Idiomas · Español e Inglés",
+      "productDesigns": "Diseños de producto",
+      "systems": "Sistemas implementados",
+      "commitment": "Compromiso"
+    },
+    "aria": {
+      "github": "GitHub de {name}",
+      "linkedin": "LinkedIn de {name}",
+      "portfolio": "Portafolio de {name}",
+      "email": "Correo de {name}"
+    },
+    "sergio": {
+      "role": "Full-Stack Developer",
+      "location": "Aguascalientes, MX",
+      "bio": "Especializado en construir aplicaciones web escalables con <strong>Angular</strong>, <strong>Vue</strong>, <strong>NestJS</strong> y <strong>TypeScript</strong>. Apasionado por la arquitectura limpia, la experiencia de usuario y la automatización.",
+      "about": [
+        "Soy <span class=\"hl-purple\">Full Stack Developer</span> con más de <span class=\"hl-yellow\">5 años</span> construyendo aplicaciones web escalables. Me enfoco en crear soluciones eficientes, mantenibles y centradas en la experiencia del usuario.",
+        "Me especializo en arquitecturas modernas con <span class=\"hl-purple\">Angular</span>, <span class=\"hl-purple\">Vue</span>, <span class=\"hl-purple\">NestJS</span> y <span class=\"hl-purple\">TypeScript</span>, aplicando <span class=\"hl-yellow\">Clean Architecture</span> y automatizando procesos para garantizar código de calidad.",
+        "Co-fundador de <span class=\"hl-yellow\">DevCrafters</span>, donde ayudamos a empresas a crear soluciones web, móviles y en la nube que <span class=\"hl-purple\">transforman sus procesos</span> de negocio."
+      ],
+      "experience": [
+        {
+          "role": "Angular Frontend Developer",
+          "company": "Capgemini",
+          "period": "May 2026 — Actual",
+          "points": [
+            "Resolución de problemas de accesibilidad en librerías de componentes.",
+            "Colaboración en componentes del design system.",
+            "Mayor adopción de componentes gracias a documentación clara."
+          ]
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Creative Software International",
+          "period": "Jul 2025 — Oct 2025",
+          "points": [
+            "Diseño del esquema de base de datos para el sistema de permisos.",
+            "Implementación de automatización de flujos de trabajo.",
+            "Corrección de deadlocks e inconsistencias en operaciones CRUD."
+          ]
+        },
+        {
+          "role": "Full Stack Developer",
+          "company": "Taruks Soluciones S.A. de C.V.",
+          "period": "Dic 2022 — Ago 2024",
+          "points": [
+            "Desarrollo en Angular con Clean Architecture.",
+            "Integración de APIs REST y formularios reactivos.",
+            "Participación en Scrum y revisiones de código."
+          ]
+        }
+      ],
+      "stackGroups": {
+        "languages": "Lenguajes",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "databases": "Bases de datos",
+        "devops": "DevOps y Nube",
+        "tools": "Testing y herramientas"
+      },
+      "projects": [
+        { "name": "BotBite", "description": "Mesero virtual por WhatsApp con IA para restaurantes, con soporte multilingüe." },
+        { "name": "Diócesis de Cd. Obregón", "description": "Plataforma de gestión eclesiástica y modernización de su sistema legacy." },
+        { "name": "Magnolias", "description": "Sistema de gestión de pedidos para una pastelería con varias sucursales." }
+      ]
+    },
+    "monica": {
+      "role": "Frontend Developer & Design",
+      "bio": "Combina desarrollo frontend con pensamiento estratégico de producto. Especializada en <strong>UX</strong>, arquitectura de información y diseño de experiencias digitales centradas en el usuario.",
+      "about": [
+        "Soy <span class=\"hl-purple\">Frontend Developer</span> con enfoque en diseño de experiencias digitales que <span class=\"hl-yellow\">conectan con las personas</span>. Combino desarrollo y pensamiento de producto para crear interfaces que no solo funcionan, sino que se sienten bien.",
+        "Me especializo en <span class=\"hl-purple\">Vue.js</span>, <span class=\"hl-purple\">Tailwind</span> y <span class=\"hl-purple\">Figma</span>, trabajando de cerca con equipos para alinear diseño, <span class=\"hl-yellow\">usabilidad</span> y objetivos de negocio.",
+        "Co-fundadora de <span class=\"hl-yellow\">DevCrafters</span>, donde construimos productos digitales que transforman la manera en que las empresas <span class=\"hl-purple\">operan y crecen</span>."
+      ]
+    },
+    "cristian": {
+      "role": "Frontend Developer",
+      "bio": "Desarrollador Full Stack con experiencia en web e IT, incluyendo soporte técnico, implementación de sistemas y administración de redes. Me interesa crear aplicaciones funcionales y escalables, combinando <strong>backend</strong>, <strong>frontend</strong> e infraestructura tecnológica.",
+      "about": [
+        "Soy <span class=\"hl-purple\">desarrollador Full Stack</span> con experiencia en desarrollo web y en el área de <span class=\"hl-yellow\">IT</span>, incluyendo soporte técnico, implementación de sistemas y administración de redes.",
+        "Me interesa crear aplicaciones <span class=\"hl-purple\">funcionales y escalables</span>, aprovechando tanto el desarrollo <span class=\"hl-yellow\">backend</span> como <span class=\"hl-yellow\">frontend</span> y mi experiencia en infraestructura tecnológica.",
+        "Co-fundador de <span class=\"hl-yellow\">DevCrafters</span>, donde construimos soluciones digitales que combinan <span class=\"hl-purple\">solidez técnica</span> con impacto real en el negocio."
+      ]
+    }
+  }
+}

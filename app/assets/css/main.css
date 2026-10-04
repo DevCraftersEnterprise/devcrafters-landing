@@ -28,3 +28,16 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Highlight helpers — global because translated copy is rendered with v-html */
+.hl-purple { color: #8b4df6; font-weight: 600; }
+.hl-yellow { color: #ddf53d; font-weight: 600; }
+.hl-strike {
+  text-decoration: line-through;
+  text-decoration-color: #ddf53d;
+  text-decoration-thickness: 2px;
+  color: #a3a3a3;
+}
+.c-purple { color: #8b4df6; }
+.c-yellow { color: #ddf53d; }
+.c-white { color: #ffffff; font-weight: 700; }

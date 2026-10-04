@@ -6,26 +6,23 @@
 
     <!-- ─── Navbar ─────────────────────────────────── -->
     <header class="navbar" :style="navStyle">
-      <a class="logo" href="/">
+      <NuxtLinkLocale class="logo" to="/">
         Dev<span class="logo-accent">Crafters</span><span class="logo-dot">.</span>
-      </a>
+      </NuxtLinkLocale>
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#services">Servicios</a>
-        <a href="#work">Proyectos</a>
-        <a href="#about">Nosotros</a>
-        <a href="#team">Equipo</a>
-        <a href="#contact">Contacto</a>
+      <nav class="nav" :aria-label="t('nav.ariaMain')">
+        <a v-for="s in sections" :key="s.id" :href="`#${s.id}`">{{ t(s.label) }}</a>
       </nav>
 
       <div class="navbar-right">
-        <a class="nav-cta" href="#contact">Let's Talk →</a>
+        <LangSwitch />
+        <a class="nav-cta" href="#contact">{{ t('nav.cta') }}</a>
         <button
           class="burger"
           :class="{ 'burger--open': menuOpen }"
           @click="menuOpen = !menuOpen"
           :aria-expanded="menuOpen"
-          aria-label="Toggle menu"
+          :aria-label="t('nav.toggleMenu')"
         >
           <span /><span /><span />
         </button>
@@ -49,14 +46,14 @@
         class="drawer"
         role="dialog"
         aria-modal="true"
-        aria-label="Navigation"
+        :aria-label="t('nav.ariaMain')"
       >
         <!-- Drawer header -->
         <div class="drawer-header">
-          <a class="logo" href="/" @click="menuOpen = false">
+          <NuxtLinkLocale class="logo" to="/" @click="menuOpen = false">
             Dev<span class="logo-accent">Crafters</span><span class="logo-dot">.</span>
-          </a>
-          <button class="drawer-close" @click="menuOpen = false" aria-label="Close menu">
+          </NuxtLinkLocale>
+          <button class="drawer-close" @click="menuOpen = false" :aria-label="t('nav.closeMenu')">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
@@ -65,37 +62,23 @@
 
         <!-- Drawer links -->
         <nav class="drawer-nav">
-          <a href="#services" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">01</span>
-            <span class="drawer-label">Servicios</span>
-            <span class="drawer-arrow">↗</span>
-          </a>
-          <a href="#work" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">02</span>
-            <span class="drawer-label">Proyectos</span>
-            <span class="drawer-arrow">↗</span>
-          </a>
-          <a href="#about" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">03</span>
-            <span class="drawer-label">Nosotros</span>
-            <span class="drawer-arrow">↗</span>
-          </a>
-          <a href="#team" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">04</span>
-            <span class="drawer-label">Equipo</span>
-            <span class="drawer-arrow">↗</span>
-          </a>
-          <a href="#contact" class="drawer-link" @click="menuOpen = false">
-            <span class="drawer-num">05</span>
-            <span class="drawer-label">Contacto</span>
+          <a
+            v-for="(s, i) in sections"
+            :key="s.id"
+            :href="`#${s.id}`"
+            class="drawer-link"
+            @click="menuOpen = false"
+          >
+            <span class="drawer-num">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span class="drawer-label">{{ t(s.label) }}</span>
             <span class="drawer-arrow">↗</span>
           </a>
         </nav>
 
         <!-- Drawer footer -->
         <div class="drawer-footer">
-          <a class="btn btn--primary" href="#contact" @click="menuOpen = false">Let's Talk →</a>
-          <p class="drawer-tagline">We build. We ship. We scale.</p>
+          <a class="btn btn--primary" href="#contact" @click="menuOpen = false">{{ t('nav.cta') }}</a>
+          <p class="drawer-tagline">{{ t('nav.tagline') }}</p>
         </div>
       </div>
     </Transition>
@@ -105,12 +88,12 @@
       <!-- Left side decorators -->
       <div class="side-deco side-deco--left" aria-hidden="true">
         <div class="deco-item">
-          <span class="deco-label">Web Dev</span>
+          <span class="deco-label">{{ t('hero.tags.web') }}</span>
           <span class="deco-dot" />
           <span class="deco-line" />
         </div>
         <div class="deco-item">
-          <span class="deco-label">Mobile</span>
+          <span class="deco-label">{{ t('hero.tags.mobile') }}</span>
           <span class="deco-dot" />
           <span class="deco-line" />
         </div>
@@ -120,43 +103,37 @@
       <div class="hero-content">
         <span class="hero-badge">
           <span class="badge-star">✦</span>
-          Tu próximo proyecto en las mejores manos
+          {{ t('hero.badge') }}
           <span class="badge-star">✦</span>
         </span>
 
         <h1 class="hero-title">
-          <span class="title-sm"><span class="c-yellow">PENSAMOS</span><br />Y CONSTRUIMOS</span>
-          <span class="c-purple">DIFERENTE</span><span class="c-yellow">.</span>
+          <span class="title-sm"><span class="c-yellow">{{ t('hero.line1') }}</span><br />{{ t('hero.line2') }}</span>
+          <span class="c-purple">{{ t('hero.line3') }}</span><span class="c-yellow">.</span>
         </h1>
 
-        <p class="hero-desc">
-          Ingeniería creativa con visión de negocio. Desarrollamos apps web,
-          móviles y software a medida que impulsan tu empresa al siguiente nivel.
-        </p>
+        <p class="hero-desc">{{ t('hero.desc') }}</p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn btn--primary">Let's Talk →</a>
-          <a href="#work" class="btn btn--outline">See Our Work →</a>
+          <a href="#contact" class="btn btn--primary">{{ t('hero.ctaPrimary') }}</a>
+          <a href="#work" class="btn btn--outline">{{ t('hero.ctaSecondary') }}</a>
         </div>
 
         <!-- Mobile-only service tags -->
         <div class="mobile-tags" aria-hidden="true">
-          <span class="mobile-tag"><span class="mobile-tag-dot" />Web Dev</span>
-          <span class="mobile-tag"><span class="mobile-tag-dot" />Mobile</span>
-          <span class="mobile-tag"><span class="mobile-tag-dot" />Software</span>
-          <span class="mobile-tag"><span class="mobile-tag-dot" />Design</span>
+          <span v-for="tag in heroTags" :key="tag" class="mobile-tag"><span class="mobile-tag-dot" />{{ t(`hero.tags.${tag}`) }}</span>
         </div>
       </div>
 
       <!-- Right side decorators -->
       <div class="side-deco side-deco--right" aria-hidden="true">
         <div class="deco-item deco-item--r">
-          <span class="deco-label">Software</span>
+          <span class="deco-label">{{ t('hero.tags.software') }}</span>
           <span class="deco-dot" />
           <span class="deco-line" />
         </div>
         <div class="deco-item deco-item--r">
-          <span class="deco-label">Design</span>
+          <span class="deco-label">{{ t('hero.tags.design') }}</span>
           <span class="deco-dot" />
           <span class="deco-line" />
         </div>
@@ -164,167 +141,135 @@
 
     </section>
 
+    <!-- ─── Services ─────────────────────────────────── -->
+    <ServicesSection />
+
+    <!-- ─── Projects ─────────────────────────────────── -->
+    <ProjectsSection />
+
     <!-- ─── About ────────────────────────────────────── -->
-    <section class="about" id="about" aria-label="About">
+    <section class="about" id="about" :aria-label="t('nav.about')">
 
       <!-- Section label -->
       <div class="about-label">
         <span class="deco-dot" />
-        <span>Quiénes somos</span>
+        <span>{{ t('about.label') }}</span>
       </div>
 
       <!-- Vision & Mission cards -->
       <div class="about-cards">
         <div class="about-card">
           <span class="about-card-num">01</span>
-          <h3 class="about-card-title">Visión</h3>
-          <p class="about-card-text">
-            Ser una empresa tecnológica <span class="hl-purple">referente</span> en el desarrollo de soluciones digitales personalizadas, reconocida por su calidad, compromiso y capacidad de transformar ideas en sistemas <span class="hl-yellow">escalables</span> y de alto impacto.
-          </p>
+          <h3 class="about-card-title">{{ t('about.visionTitle') }}</h3>
+          <p class="about-card-text" v-html="t('about.vision')" />
         </div>
         <div class="about-card">
           <span class="about-card-num">02</span>
-          <h3 class="about-card-title">Misión</h3>
-          <p class="about-card-text">
-            Crear <span class="hl-purple">software a medida</span> que transforme la forma en que las empresas operan, integrando <span class="hl-yellow">innovación</span>, estrategia y tecnología de alto nivel.
-          </p>
+          <h3 class="about-card-title">{{ t('about.missionTitle') }}</h3>
+          <p class="about-card-text" v-html="t('about.mission')" />
         </div>
       </div>
 
       <!-- Manifesto -->
       <div class="manifesto">
-        <h2 class="manifesto-title">Nuestro<br /><span class="c-purple">Manifiesto</span><span class="c-yellow">.</span></h2>
+        <h2 class="manifesto-title">{{ t('about.manifestoTitle1') }}<br /><span class="c-purple">{{ t('about.manifestoTitle2') }}</span><span class="c-yellow">.</span></h2>
 
         <div class="manifesto-body">
-          <p class="manifesto-line manifesto-lead">
-            No creemos en soluciones <span class="hl-strike">genéricas</span>.
-          </p>
-
-          <p class="manifesto-line">
-            Creemos que cada negocio es <span class="hl-yellow">único</span>,<br />
-            y su tecnología también debería serlo.
-          </p>
+          <p class="manifesto-line manifesto-lead" v-html="t('about.manifesto.lead')" />
+          <p class="manifesto-line" v-html="t('about.manifesto.l1')" />
 
           <div class="manifesto-divider" />
 
-          <p class="manifesto-line manifesto-quiet">
-            Antes de escribir una línea de código, <span class="hl-purple">escuchamos</span>.<br />
-            Antes de construir, <span class="hl-purple">entendemos</span>.
-          </p>
-
-          <p class="manifesto-line">
-            Diseñamos sistemas que <span class="hl-yellow">crecen contigo</span>,<br />
-            que evolucionan contigo y que generan <span class="hl-purple">impacto real</span>.
-          </p>
+          <p class="manifesto-line manifesto-quiet" v-html="t('about.manifesto.l2')" />
+          <p class="manifesto-line" v-html="t('about.manifesto.l3')" />
 
           <div class="manifesto-divider" />
 
-          <p class="manifesto-line manifesto-quiet">
-            No desarrollamos software por desarrollar.<br />
-            <strong>Construimos herramientas que <span class="hl-yellow">transforman empresas</span>.</strong>
-          </p>
-
-          <p class="manifesto-closer">
-            Esto no es solo tecnología.<br />
-            Es <span class="hl-purple">estrategia</span>, <span class="hl-yellow">visión</span> y <span class="c-white">crecimiento</span>.
-          </p>
+          <p class="manifesto-line manifesto-quiet" v-html="t('about.manifesto.l4')" />
+          <p class="manifesto-closer" v-html="t('about.manifesto.closer')" />
         </div>
       </div>
 
     </section>
 
     <!-- ─── Team ─────────────────────────────────────── -->
-    <section class="team" id="team" aria-label="Team">
+    <section class="team" id="team" :aria-label="t('nav.team')">
       <div class="team-header">
         <div class="about-label">
           <span class="deco-dot" />
-          <span>El equipo</span>
+          <span>{{ t('team.label') }}</span>
         </div>
         <h2 class="team-title">
-          Las personas detrás<br />
-          de tu <span class="c-purple">proyecto</span><span class="c-yellow">.</span>
+          {{ t('team.title1') }}<br />
+          {{ t('team.title2') }} <span class="c-purple">{{ t('team.title3') }}</span><span class="c-yellow">.</span>
         </h2>
-        <p class="team-desc">
-          Equipo compacto, enfoque total. Sin intermediarios — trabajas
-          directamente con quienes construyen tu producto.
-        </p>
+        <p class="team-desc">{{ t('team.desc') }}</p>
       </div>
 
       <div class="team-grid">
-
-        <a class="member-card" href="/equipo/sergio" aria-label="Portafolio de Sergio Barreras">
+        <NuxtLinkLocale
+          v-for="m in members"
+          :key="m.slug"
+          class="member-card"
+          :to="`/equipo/${m.slug}`"
+          :aria-label="t('team.portfolioOf', { name: m.name })"
+        >
           <div class="member-photo-wrap">
-            <img src="/team/SergioBarreras.png" class="member-photo" alt="Sergio Barreras" />
+            <img
+              :src="`/team/${m.photo}-600.webp`"
+              :srcset="`/team/${m.photo}-600.webp 600w, /team/${m.photo}-1200.webp 1200w`"
+              sizes="(max-width: 1024px) 480px, 360px"
+              class="member-photo"
+              :alt="m.name"
+              loading="lazy"
+              decoding="async"
+            />
             <div class="member-photo-fade" />
           </div>
-          <div class="member-glow member-glow--s" />
+          <div class="member-glow" :class="`member-glow--${m.slug[0]}`" />
           <div class="member-body">
             <div class="member-top">
               <span class="member-arrow">↗</span>
             </div>
             <div class="member-info">
-              <span class="member-name">Sergio Barreras</span>
-              <span class="member-role">Full-Stack Developer</span>
+              <span class="member-name">{{ m.name }}</span>
+              <span class="member-role">{{ t(`team.roles.${m.slug}`) }}</span>
             </div>
             <div class="member-tags">
-              <span class="member-tag">Vue</span>
-              <span class="member-tag">Node.js</span>
-              <span class="member-tag">APIs</span>
+              <span v-for="tag in m.tags" :key="tag" class="member-tag">{{ tag }}</span>
             </div>
           </div>
-        </a>
-
-        <a class="member-card" href="/equipo/monica" aria-label="Portafolio de Mónica Chávez">
-          <div class="member-photo-wrap">
-            <img src="/team/MonicaChavez.png" class="member-photo" alt="Mónica Chávez" />
-            <div class="member-photo-fade" />
-          </div>
-          <div class="member-glow member-glow--m" />
-          <div class="member-body">
-            <div class="member-top">
-              <span class="member-arrow">↗</span>
-            </div>
-            <div class="member-info">
-              <span class="member-name">Mónica Chávez</span>
-              <span class="member-role">Developer &amp; Strategy</span>
-            </div>
-            <div class="member-tags">
-              <span class="member-tag">UX</span>
-              <span class="member-tag">Frontend</span>
-              <span class="member-tag">Strategy</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="member-card" href="/equipo/cristian" aria-label="Portafolio de Cristian Corona">
-          <div class="member-photo-wrap">
-            <img src="/team/CristianCorona.png" class="member-photo" alt="Cristian Corona" />
-            <div class="member-photo-fade" />
-          </div>
-          <div class="member-glow member-glow--c" />
-          <div class="member-body">
-            <div class="member-top">
-              <span class="member-arrow">↗</span>
-            </div>
-            <div class="member-info">
-              <span class="member-name">Cristian Corona</span>
-              <span class="member-role">Frontend Developer</span>
-            </div>
-            <div class="member-tags">
-              <span class="member-tag">React</span>
-              <span class="member-tag">UI</span>
-              <span class="member-tag">CSS</span>
-            </div>
-          </div>
-        </a>
-
+        </NuxtLinkLocale>
       </div>
     </section>
+
+    <!-- ─── Contact ──────────────────────────────────── -->
+    <ContactSection />
+
+    <SiteFooter />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+
+const { t } = useI18n()
+
+const sections = [
+  { id: 'services', label: 'nav.services' },
+  { id: 'work', label: 'nav.work' },
+  { id: 'about', label: 'nav.about' },
+  { id: 'team', label: 'nav.team' },
+  { id: 'contact', label: 'nav.contact' },
+]
+
+const heroTags = ['web', 'mobile', 'software', 'design']
+
+const members = [
+  { slug: 'sergio', name: 'Sergio Barreras', photo: 'SergioBarreras', tags: ['Angular', 'Vue', 'NestJS'] },
+  { slug: 'monica', name: 'Mónica Chávez', photo: 'MonicaChavez', tags: ['UX', 'Frontend', 'Strategy'] },
+  { slug: 'cristian', name: 'Cristian Corona', photo: 'CristianCorona', tags: ['React', 'UI', 'CSS'] },
+]
 
 const orbPrimary = ref<HTMLElement | null>(null)
 const orbSecondary = ref<HTMLElement | null>(null)
@@ -672,6 +617,7 @@ onUnmounted(() => {
 .drawer-link:nth-child(2) { animation-delay: 0.14s; }
 .drawer-link:nth-child(3) { animation-delay: 0.20s; }
 .drawer-link:nth-child(4) { animation-delay: 0.26s; }
+.drawer-link:nth-child(5) { animation-delay: 0.32s; }
 
 @keyframes linkIn {
   from { opacity: 0; transform: translateX(16px); }
@@ -975,6 +921,10 @@ onUnmounted(() => {
 
   .burger {
     display: flex;
+  }
+
+  .navbar-right {
+    gap: 12px;
   }
 
   /* Hide badge, show mobile tags */
